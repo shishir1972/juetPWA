@@ -1,0 +1,77 @@
+#footer
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(200px,1fr);
+    /*background-color:#003a68;*/
+    background: url(/static/images/bg6.jpg);
+    padding: 2em;
+}
+.ImportantDisclosures ul,.ImportantLinks ul,.ContactInfo ul
+{
+ list-style: none;
+
+}
+.ImportantDisclosures ul li:nth-child(1),.ImportantLinks ul li:nth-child(1),.ContactInfo ul li:nth-child(1)
+{
+    color: white;
+    cursor: initial;
+    width: 20em;
+}
+.ImportantDisclosures ul li:nth-child(1):hover,.ImportantLinks ul li:nth-child(1):hover,.ContactInfo ul li:nth-child(1):hover
+{
+    background: initial;
+}
+.ImportantDisclosures ul li:nth-child(2),.ImportantLinks ul li:nth-child(2),.ContactInfo ul li:nth-child(2)
+{
+    margin-top: 1em; 
+}
+.ImportantDisclosures ul li,.ImportantLinks ul li,.ContactInfo ul li
+{
+    color:#afcfe9;
+    margin-bottom: 0.65em;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    font-size: 0.76rem;
+    cursor: pointer;
+    width:60%;
+    text-align: left;
+    padding: 0.25em;
+    width: 25em;
+}
+.ImportantDisclosures ul li:hover,.ImportantLinks ul li:hover,.ContactInfo ul li:hover
+{
+    background: gray;
+}
+.ContactInfo ul li:nth-child(2)
+{
+    width: initial;
+}
+.ContactInfo ul li:nth-child(2):hover
+{
+    background: inherit;
+
+}
+
+.tagline
+{
+    padding:0.34em;
+    text-align: center;
+    color: white;
+    background: url(/static/images/bg6.jpg);
+    text-justify: auto;
+    text-transform: capitalize;
+    font-size: 0.83rem;
+    font-weight: bold;
+    letter-spacing: 0.55px;
+    border: none;
+    font-style: italic;
+}
+@media screen and (max-width:1100px)
+{
+    #footer
+    {
+     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+   
+    }
+}
