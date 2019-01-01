@@ -1,12 +1,8 @@
 import React from 'react';
-import {Switch,Route} from 'react-router-dom'
+import {Switch} from 'react-router-dom'
 
 import NavBarPackage from "./juet/header/navbarMain.jsx";
-//import BodyMainLandingPage from "./juet/LandingPage/bodyMain.jsx";
 import FooterMake from './juet/footer/footerMain.jsx';
-
-//import About from './About.jsx'
-//import FacultyMain from './juet/faculty/index'
 
 import {renderRoutes} from 'react-router-config'
 import {routes} from './Routes.jsx'
