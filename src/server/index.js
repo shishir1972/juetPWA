@@ -10,7 +10,7 @@ import ReactDOMServer from "react-dom/server";
 
 require('dotenv').config()
 const compression = require('compression')
-//import * as faculty from './middlewares/FacultyRecord'
+import * as faculty from './middlewares/FacultyRecord'
 const app = express()
 
 app.set('view engine','ejs')
@@ -19,9 +19,10 @@ app.use(morgan())
 app.use(helmet())
 app.use(compression())
 app.use(express.static('build',{ maxage: '1d' }))
+app.use(express.static('views',{ maxage: '1d' }))
 app.use('/juet',express.static('build',{ maxage: '1d' }))
 app.use("/static",express.static('static',{ maxage: '1d' }))
-//app.use('/api/faculty',faculty)
+app.use('/api/faculty',faculty)
 
 app.get("*",(req,res)=>{
 

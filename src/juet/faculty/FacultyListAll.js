@@ -59,7 +59,7 @@ class DisplayFaculty extends Component
                 <div class="BriefButton"><Link to={`/juet/faculty/true/${d.department}/${d.id}`}>Brief Profile</Link></div>     
             </div>
         </div>
-       <div class="facultyLineContainer"><span class="line"></span></div>
+      
        </div>
         )
     })}
@@ -130,3 +130,5 @@ class FacultyListAll extends Component
 
 }
 export default FacultyListAll;
+
+/* <div class="facultyLineContainer"><span class="line"></span></div>*/

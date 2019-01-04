@@ -16,10 +16,13 @@
   },
   "browserslist": [
     "last 2 version",
-    "dead",
     "iOS >= 9",
     "IE 10",
-    "Firefox > 20"
+    "Firefox > 20",
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
   ],
   "keywords": [],
   "author": "",
