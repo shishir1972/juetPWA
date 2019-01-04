@@ -1,0 +1,16 @@
+{
+  "name": "Jaypee University of Engineering and Technology, Guna",
+  "short_name": "JUET",
+  "theme_color": "#003a68",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "juetlogo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }],
+  "splash_pages": null
+}
