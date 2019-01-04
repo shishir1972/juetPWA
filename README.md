@@ -1,5 +1,5 @@
-# juetPWA
-PWA based on React.js with SERVER SIDE RENDERING
+# juetPWA  https://sushantr134.herokuapp.com/
+PWA based on React.js with SERVER SIDE RENDERING (CONNECTED TO HEROKU)
 
 This is a Progressive Web App based Website developed for Jaypee University of Engineering and Technology, Guna.
 Technologies Used are :-
