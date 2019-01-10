@@ -1,0 +1,219 @@
+.facultyBackground {
+  background: url(/static/images/campus2.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+}
+
+.facultyBackground .facultyHeadingTag {
+  background: rgba(1, 1, 1, 0.5);
+  padding: 14em;
+}
+
+#faculty {
+  position: relative;
+  top: -37vh;
+  width: 85%;
+  margin: 0 auto;
+}
+
+#faculty .facultyLineContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+}
+
+#faculty .facultyLineContainer .line {
+  background: #c4c1c1;
+  width: 95%;
+  padding: 0.035em;
+}
+
+.facultyContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.85fr 2.5fr 0.85fr;
+      grid-template-columns: 0.85fr 2.5fr 0.85fr;
+  grid-auto-rows: minmax(200px, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  background: white;
+  color: darkblue;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.25em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 3px 4px 20px 0 grey;
+          box-shadow: 3px 4px 20px 0 grey;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.facultyContainer .facultyPhotoContainer {
+  padding: 0.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.facultyContainer .facultyPhotoContainer img {
+  width: 65%;
+  max-width: 100%;
+  border-radius: 100%;
+}
+
+.facultyContainer .facultyPhotoContainer .facultyNameTag, .facultyContainer .facultyPhotoContainer .facultyDesignationTag {
+  margin-top: 0.25em;
+}
+
+.facultyContainer .facultyPhotoContainer .facultyNameTag {
+  font-size: 1.2rem;
+  color: #00355f;
+  font-weight: bold;
+  text-align: center;
+}
+
+.facultyContainer .facultyPhotoContainer .facultyDesignationTag {
+  font-size: 0.88rem;
+  color: black;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.facultyContainer .facultyMainInfoContainer {
+  border-left: 1px solid #c4c1c1;
+  padding: 1em 0 1em 0;
+}
+
+.facultyContainer .facultyMainInfoContainer .facultyUpperInfo {
+  padding: 2% 0 0 2%;
+}
+
+.facultyContainer .facultyMainInfoContainer .facultyUpperInfo ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.facultyContainer .facultyMainInfoContainer .facultyUpperInfo li {
+  margin-top: 1em;
+  margin-right: 0.5em;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.facultyContainer .facultyMainInfoContainer .facultyUpperInfo li .UpperInfoData {
+  all: unset;
+  font-weight: normal;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.facultyContainer .facultyMainInfoContainer .facultyLowerInfo {
+  padding: 5% 0 0 2%;
+}
+
+.facultyContainer .facultyMainInfoContainer .facultyLowerInfo p {
+  font-size: 0.96rem;
+  text-align: justify;
+  letter-spacing: 1px;
+  font-style: italic;
+  line-height: 30px;
+}
+
+.facultyContainer .facultyBriefButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.facultyContainer .facultyBriefButton .BriefButton {
+  background: #014f8f;
+  text-transform: capitalize;
+  padding: 0.8em;
+  border-radius: 10em;
+  margin-left: 5%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.facultyContainer .facultyBriefButton .BriefButton a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+}
+
+@media screen and (max-width: 799px) {
+  .facultyBackground .facultyHeadingTag {
+    padding: 11em;
+  }
+  #faculty {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 8%;
+    margin: 0 auto;
+    top: -36vh;
+  }
+  .facultyContainer {
+    display: block;
+    width: 80%;
+  }
+  .facultyContainer .facultyBriefButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=faculty.css.map */

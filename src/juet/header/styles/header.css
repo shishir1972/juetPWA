@@ -1,0 +1,338 @@
+*,*::after,*::before
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+:root
+{
+    --background: whitesmoke;
+    --PatternBackground:url(/static/images/bg6.jpg);
+}
+@keyframes fade
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+@keyframes TopToDown
+{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+@keyframes slideLeftToRight
+{
+    from
+    {
+        transform: translateX(-100%);
+    }
+    to
+    {
+        transform: translateX(0%);
+    }
+}
+*:not(.SubNavOptions,.social_links)
+{
+    animation: fade 1.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1;
+}
+.stick_header_top
+{
+    left: 0;
+    position: fixed;
+    animation: TopToDown 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.0s;
+    top: 0;
+    box-shadow: 0 0 10px #555555;
+    width: 100%;
+}
+.college_logo
+{
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+}
+
+.upper_nav,.main_nav
+{
+    display: grid;
+    grid-gap:0.45em;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+}
+.main_nav
+{
+    z-index: 199;
+    background: white;
+    text-transform: uppercase;
+}
+.upper_nav
+{
+    background: var(--PatternBackground);
+    letter-spacing: 0.23px;
+}
+.upper_nav nav
+{
+    text-transform: uppercase;
+}
+.upper_nav nav,.main_nav nav
+{
+    padding: 0.35em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.upper_nav nav .NavUL,.main_nav nav .NavUL
+{
+    list-style: none;
+}
+.upper_nav nav .NavUL > li,.main_nav nav .NavUL > li
+{
+    display: inline-block;
+    margin-right: 1em;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding:0.45em;
+    border-radius: 0.23em;
+    text-align: center;
+    transition: background 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+}
+#header
+{
+    /*animation:slideLeftToRight 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;*/
+}
+.upper_nav .NavUL > li
+{
+    font-size: 0.8rem;
+    color:gainsboro;
+}
+.main_nav .NavUL > li
+{
+    font-size: 0.79rem;
+    letter-spacing: 1.4px;
+    color:#6f6f6f;
+}
+
+.main_nav nav
+{
+    margin: 0 auto;
+    background: inherit;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.upper_nav nav .NavUL > li:hover,.main_nav nav .NavUL > li:hover
+{
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.upper_nav nav .NavUL > li:hover
+{
+    background: white;
+    color:darkblue;
+}
+.main_nav nav .NavUL > li:hover
+{
+    background: #072740;
+    color: white;
+}
+.main_nav nav .NavUL > li a,.upper_nav nav .NavUL > li a {
+    opacity: 1;
+    text-decoration: none;
+    color:inherit;
+    position: relative;
+}
+.main_nav nav .NavUL > li a::before
+{
+    content: '';
+    display: block;
+    height: 5px;
+    background: goldenrod;
+    position: absolute;
+    top: -.95em;
+    left: 0;
+    right: 0;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: transform cubic-bezier(0.215, 0.610, 0.355, 1) 250ms;
+}
+.main_nav nav .NavUL > li a:hover::before {
+    transform: scale(1,1);
+}
+
+.social_links
+{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right:0.34em;
+}
+.social_links > li
+{
+    color:darkblue;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+/*SubOptions CSS */
+
+.SubNavOptions
+{
+
+    background:rgba(7, 39, 64, 0.8);
+    position: absolute;
+    left:5%;
+    margin-top:0.3%;
+    z-index:1002;
+    padding: 1em 4em 4em 2em;
+    box-sizing: border-box;
+    width: 90vw;
+    text-align: left;
+    display: grid;
+    grid-gap: 1em;
+    height: 40em;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    opacity: 0;
+    border-radius: 0.23em;
+    transform: scale(0,0);
+    border-top:3px solid rgb(7, 39, 64);
+    transition: opacity 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform-origin: top;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.ShiftSubNavOptions
+{
+    top:57%;
+}
+.SubNavOptions .SubNavOptionsUL
+{
+    all:unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.SubNavOptions .SubNavOptionsUL > li
+{
+    all:unset;
+    text-align: left;
+    text-transform: initial !important;
+    font-style: initial;
+    padding: 0.45em;
+    color:white;
+    position: relative;
+    transition: padding-left cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
+.SubNavOptions .SubNavOptionsUL > li > a
+{
+    all:unset !important;
+}
+.SubNavOptions .SubNavOptionsUL > li:not(:first-child):hover,.SubNavMoreOptions > ul > li:hover
+{
+    color:white;
+    padding-left: 1.3em;
+    transition: padding-left cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    background: #1e81d0 !important;
+}
+.SubNavOptions .SubNavOptionsUL > li:nth-child(1) > h1
+{
+    font-size: 1rem;
+    color:gold !important;
+}
+.SubNavOptions .SubNavOptionsUL > li:nth-child(1) > .line
+{
+    background: crimson;
+}
+.SubNavOptions .SubNavOptionsUL > li:not(h1)
+{
+    margin-bottom:0.15em;
+    font-size:0.78rem;
+}
+
+
+.SubNavMoreOptions
+{
+    position: absolute;
+    background: rgba(7, 39, 64,1);
+    transform: scale(-1,0);
+    padding: 1em;
+    margin-top:0.4em;
+    border-top:5px solid goldenrod;
+    width: 50vw;
+    left: 0;
+    z-index: 1002;
+    right: 0;
+    transform-origin: right;
+    opacity: 0;
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+.SubNavOptions .SubNavOptionsUL > li:not(:first-child):hover .SubNavMoreOptions
+{
+    transform: scale(1,1);
+    opacity: 1;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+.SubNavMoreOptions > ul
+{
+    list-style: none;
+}
+.SubNavMoreOptions > ul > li
+{
+    margin-bottom: 0.6em;
+    padding: 0.45em;
+    width: 56%;
+}
+.SubNavMoreOptions > ul > li > a,.SubNavMoreOptions > ul > li > a::after,.SubNavMoreOptions > ul > li > a::before
+{
+    all:unset !important;
+}
+.SubNavOptions .SubNavOptionsUL > li > a,.SubNavOptions .SubNavOptionsUL > li > a::after,.SubNavOptions .SubNavOptionsUL > li > a::before
+{
+    all:unset !important;
+}
+@media screen and (min-width:861px)
+{
+    .main_nav nav .NavUL > li:hover .SubNavOptions
+    {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1,1);
+        transition: opacity cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s;
+    }
+}
+@media screen and (max-width:860px)
+{
+    .social_links
+    {
+        justify-content: center;
+    }
+    .social_links > li
+    {
+        font-size: 1rem;
+    }
+    .upper_nav nav .NavUL
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .upper_nav nav .NavUL > li
+    {
+        margin: 0 auto;
+        font-style: initial;
+    }
+    .SubNavOptions
+    {
+        display: none;
+    }
+    .upper_nav .NavUL > li
+    {
+        font-size:0.76rem;
+    }
+}
+

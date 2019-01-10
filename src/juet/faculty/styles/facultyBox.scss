@@ -1,0 +1,166 @@
+@import '../../common_sass/_common';
+
+.facultyBoxModalContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1,1,1,0.6);
+    margin:0 auto;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    right:0;
+    z-index:1050;
+    width:100%;
+    .facultyBoxModalMain
+    {
+      display: flex;
+      background: white;
+      color:black;
+      width: 55%;
+      flex-direction: column;
+      border-radius: 0.45em;
+      padding: 3em;
+      position: relative;
+      .facultyBoxModalClose
+    {
+      position: absolute;
+      background: rgba(1,1,1,1);
+      width:30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top:0;
+      right: 2%;
+      .BoxCloseButton
+      {
+         color:white;
+         font-size: 1.5rem;
+         cursor: pointer;
+      }
+    }
+      .facultyBoxUpper
+      {
+          @include gridMaker(0.8fr 1.5fr,minmax(200px,1fr),0.4em);
+          padding:0 2em 2em 2em; 
+          .facultyBoxProfilePic
+         {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            img
+            {
+                @include responsive_image(85%);
+                border-radius: 100%;
+            }
+            .displayName,.displayDesignation
+            {
+                margin-top:0.4em;
+                text-align: center;
+            }
+            .displayName
+            {
+                font-size: 1.1rem;
+            }
+            .displayDesignation
+            {
+                font-size:0.7rem;
+            }
+         }
+         .facultyBoxProfileDetails
+         {   display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            border-left: 1px solid #c4c1c1;
+             .detailsContainer
+             {
+                margin-left: 8%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                margin-top: 8%;
+                 ul
+                 {
+                     list-style: none;
+                   li
+                   {
+                       margin-bottom: 1em;
+                       font-size: 0.79rem;
+                       width: 100%;
+                       text-align: left;
+                       label
+                       {   
+                           font-size: 1rem;
+                           color:darkblue;
+                           font-weight: bold;
+                       }
+                   } 
+                }
+             }
+         }
+      }
+      .facultyBoxLower
+      {  
+          overflow-y:scroll;
+          height: 10em;
+          p
+          {
+              line-height: 22px;
+              font-style: italic;
+              color:#5b5a63;
+              font-size:0.9rem;
+              letter-spacing: 0.8px;
+          }
+      }
+    }
+}
+
+@media screen and (max-width:851px)
+{
+    .facultyBoxModalContainer
+    {
+        .facultyBoxModalMain
+        {
+            padding: 2em;
+            width: 70%;
+            .facultyBoxUpper
+            {
+                grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+                grid-auto-rows: minmax(156px, 0.5fr);
+                padding: 0;
+
+                .facultyBoxProfilePic
+                {
+                    img
+                    {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:515px)
+{
+    .facultyBoxModalContainer
+    {
+        .facultyBoxModalMain
+        {
+            width: 80%;
+            .facultyBoxUpper
+            {
+                .facultyBoxProfilePic
+                {
+                    img
+                    {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}

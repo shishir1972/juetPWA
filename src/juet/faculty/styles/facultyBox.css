@@ -1,0 +1,191 @@
+.facultyBoxModalContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(1, 1, 1, 0.6);
+  margin: 0 auto;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1050;
+  width: 100%;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  color: black;
+  width: 55%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0.45em;
+  padding: 3em;
+  position: relative;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxModalClose {
+  position: absolute;
+  background: #010101;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  right: 2%;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxModalClose .BoxCloseButton {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.8fr 1.5fr;
+      grid-template-columns: 0.8fr 1.5fr;
+  grid-auto-rows: minmax(200px, 1fr);
+  grid-gap: 0.4em;
+  padding: 0 2em 2em 2em;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfilePic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfilePic img {
+  width: 85%;
+  max-width: 100%;
+  border-radius: 100%;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfilePic .displayName, .facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfilePic .displayDesignation {
+  margin-top: 0.4em;
+  text-align: center;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfilePic .displayName {
+  font-size: 1.1rem;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfilePic .displayDesignation {
+  font-size: 0.7rem;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfileDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-left: 1px solid #c4c1c1;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfileDetails .detailsContainer {
+  margin-left: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 8%;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfileDetails .detailsContainer ul {
+  list-style: none;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfileDetails .detailsContainer ul li {
+  margin-bottom: 1em;
+  font-size: 0.79rem;
+  width: 100%;
+  text-align: left;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfileDetails .detailsContainer ul li label {
+  font-size: 1rem;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxLower {
+  overflow-y: scroll;
+  height: 10em;
+}
+
+.facultyBoxModalContainer .facultyBoxModalMain .facultyBoxLower p {
+  line-height: 22px;
+  font-style: italic;
+  color: #5b5a63;
+  font-size: 0.9rem;
+  letter-spacing: 0.8px;
+}
+
+@media screen and (max-width: 851px) {
+  .facultyBoxModalContainer .facultyBoxModalMain {
+    padding: 2em;
+    width: 70%;
+  }
+  .facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper {
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(156px, 0.5fr);
+    padding: 0;
+  }
+  .facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfilePic img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .facultyBoxModalContainer .facultyBoxModalMain {
+    width: 80%;
+  }
+  .facultyBoxModalContainer .facultyBoxModalMain .facultyBoxUpper .facultyBoxProfilePic img {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=facultyBox.css.map */

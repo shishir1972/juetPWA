@@ -1,0 +1,144 @@
+@import '../../common_sass/common';
+$grid_col : repeat(auto-fit,minmax(250px,1fr));
+
+
+.AnnouncementsNew
+{    
+    background:#F9F9F9;
+    padding: 2em;
+    h1
+    {
+        text-align: center;
+        color:darkblue;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 0.55em;
+    }
+    .line
+   {
+       background: goldenrod;
+   }
+    .AnnouncementsNewContainer
+    {
+        @include gridMaker($grid_col,minmax(300px,1fr),3em);
+        @include container(2% 10% 2% 10%,0 auto,100%,auto);
+      
+        .AnnouncementsCardNew
+        {
+            @include container(0em,0,100%,93%);
+            background:white; 
+            position: relative;
+            border-radius: 0em;
+            box-shadow: 7px 10px 19px 0px #a9abaf;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            align-items: center;
+            overflow: hidden;
+            h3
+            {
+               padding: 1em 1em 0 1em;
+               font-size:1rem;
+            }
+            .AnnouncementsCardPhoto
+            {
+              @include responsive_image(100%);
+              transform: scale(1,1);
+              transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+            }
+            .AnnouncementsCardPhoto:hover
+            {
+                transform: scale(1.2,1.2);
+                transition: transform cubic-bezier(0.23, 1, 0.320, 1) 0.5s;
+            }
+            .CardNewButton
+            {
+                padding:0em 1em 1em 1em;
+                margin-bottom: 2em;
+                color:rgb(23, 166, 202);
+                font-weight: bold;
+                font-size: 0.88rem;
+                cursor: pointer;
+            }
+            .AnnouncementsNewText
+            {
+                padding: 1em;
+                box-sizing: border-box;
+                text-align: left;
+                font-style: italic;
+                p
+                {
+                    color:#6f6f6f;
+                    font-size: 0.88rem;
+                    line-height: 20px;
+                    letter-spacing: 1.3px;
+                }
+              
+            }       
+        }
+    }
+}
+
+.CardViewContainer
+{
+    position:fixed;
+    top:0;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 1003;
+    width:100%;
+    height: 100vh;
+    transform: scale(1,0);
+    background:rgba(19, 24, 27, 0.63);
+    transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 0.6s;
+    #CardCloseToggle
+    {
+    position: relative;
+    display: none;
+    }
+    #CardCloseToggle:checked
+    {
+        *:not(.CardViewContainer)
+        {
+            filter: blur(10px);
+        }
+    }
+    .CardCloseButton
+    {
+        background:goldenrod;
+        color:white;
+        font-weight: bolder;
+        text-align: center;
+        position: absolute;
+        right: 0;
+        padding: 0.7em;
+        font-size: 1rem;
+        cursor: pointer;
+        span
+        {
+            font-size: 1.3rem;
+        }
+    }
+
+    
+    .CardReadView
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 0 auto;
+        transform: scale(1,0);
+        height: 25em;
+        background: rgba(7, 39, 64, 0.93);
+        padding:3em;
+        color:white;
+        overflow-y: scroll;
+        position: relative;
+        opacity: 0;
+        transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+
+
+}
+
