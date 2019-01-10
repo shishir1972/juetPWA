@@ -38,7 +38,7 @@ app.get("/service-worker.js", (req, res) => {
   res.sendFile(path.resolve(__dirname, "views", "service-worker.js"));
 });
 
-app.get("/*",async(req,res)=>{
+app.get("/*",(req,res)=>{
 
     const branch = matchRoutes(routes, req.url);
     const promises = branch.map(({route}) => {

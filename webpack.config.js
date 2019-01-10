@@ -10,10 +10,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
 
-require("@babel/polyfill");
+//require("@babel/polyfill");
 
 var devConfig = {
-    entry:["@babel/polyfill",'./src/browser/index.jsx'],
+    entry:['./src/browser/index.jsx'],
     output:{
         path:path.resolve(__dirname,'Devbuild'),
         filename:'juet.[hash].js',
@@ -66,7 +66,7 @@ var devConfig = {
 }
 
 var browserConfig = {
-    entry:["@babel/polyfill",'./src/browser/index.jsx'],
+    entry:['./src/browser/index.jsx'],
     output:{
         path:path.resolve(__dirname,'build'),
         filename:'juet_bundle.js',
@@ -128,7 +128,7 @@ var browserConfig = {
     ]
 }
 var serverConfig = {
-    entry: ["@babel/polyfill",'./src/server/index.js'],
+    entry: ['./src/server/index.js'],
     target: 'node',
     externals: [nodeExternals()],
     output: {
