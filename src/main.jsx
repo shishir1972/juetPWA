@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch,Route} from 'react-router-dom'
+import {Switch,Route,withRouter} from 'react-router-dom'
 
 import NavBarPackage from "./juet/header/navbarMain.jsx";
 import FooterMake from './juet/footer/footerMain.jsx';
@@ -40,4 +40,4 @@ class IndexRender extends React.PureComponent{
     }
 
 }
-export default IndexRender;
+export default withRouter(IndexRender);

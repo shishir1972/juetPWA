@@ -52,7 +52,7 @@ class SecondNavbar extends Component {
                             {id: 'SubNavOptions1_3', Link_to: '/jaypeeGroup', title: 'Jaypee Group'},
                             {id: 'SubNavOptions1_4', Link_to: '/ChancellorMessage', title: 'Message From Chancellor'},
                             {id: 'SubNavOptions1_5', Link_to: '/JSS', title: 'JSS'},
-                            {id: 'SubNavOptions1_6', Link_to: '/juet/faculty', title: 'Faculty'},
+                            {id: 'SubNavOptions1_6', Link_to: '/faculty', title: 'Faculty'},
                             {id: 'SubNavOptions1_7', Link_to: '/staff', title: 'Staff'},
                             {id: 'SubNavOptions1_8', Link_to: '/sisterInstitutes', title: 'Sister Institutes'}
                         ],
@@ -145,15 +145,15 @@ class SecondNavbar extends Component {
                 <span><img src="/static/images/final_header_grey_txt.png" alt="JUET" className="college_logo" /></span>
                 <nav>
                     <ul className="NavUL">
-                        <li><a href='/'>Home</a></li>
-                        <li><a href="">About</a>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to="">About</Link>
                             <div className="SubNavOptions">
                                 <ul className="SubNavOptionsUL">
                                     <li><h1>University</h1><br/><span className="line"></span></li>
                                     {
                                         this.state.dataContainerSubOptions.About.University.map((data) => {
                                             return(
-                                                <li key={data.id}><a href={data.Link_to}>{data.title}</a></li>
+                                                <li key={data.id}><Link to={data.Link_to}>{data.title}</Link></li>
                                              )
                                     })
                                     }

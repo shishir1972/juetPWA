@@ -69,13 +69,10 @@ class FacultyListAll extends Component
     }
 
     componentDidMount() {
+        
         document.title = "Faculties@JUET,Guna";
-        if (!window.__DATA_FROM_SERVER__)
-        {
-            this.props.onFetchFacultyAll() 
-        }
-        //this.props.onFetchFacultyAll() 
-       
+        this.props.onFetchFacultyAll() 
+      
     }
     
     render()
