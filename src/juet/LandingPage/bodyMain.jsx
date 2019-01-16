@@ -5,6 +5,10 @@ import AnnouncementsCards from './AnnouncementsCards';
 
 class BodyMainLandingPage extends Component
 {
+    componentDidMount()
+    {
+        document.title="Jaypee University of Engineering And Technology, Guna"
+    }
     render(){
         return(
             <div>

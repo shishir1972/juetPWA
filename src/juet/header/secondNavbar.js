@@ -38,7 +38,7 @@ class SecondNavbar extends Component {
             dataContainer: [
                 {id: 'NavUL2_1', Link_to: '/', title: 'Home', is_SubOpt: false},
                 {id: 'NavUL2_2', Link_to: '', title: 'About', is_SubOpt: true},
-                {id: 'NavUL2_3', Link_to: '', title: 'Admission', is_SubOpt: false},
+                {id: 'NavUL2_3', Link_to: '/admissions', title: 'Admission', is_SubOpt: false},
                 {id: 'NavUL2_4', Link_to: '', title: 'Academics', is_SubOpt: true},
                 {id: 'NavUL2_5', Link_to: '', title: 'Placement', is_SubOpt: false},
                 {id: 'NavUL2_6', Link_to: '', title: 'Facilities', is_SubOpt: true}
@@ -223,7 +223,7 @@ class SecondNavbar extends Component {
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="">Admission</a></li>
+                        <li><Link to='/admissions'>Admission</Link></li>
                         <li><a href="">Academics</a>
                             <div className="SubNavOptions">
                                 <ul className="SubNavOptionsUL">

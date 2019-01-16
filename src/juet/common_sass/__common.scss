@@ -1,3 +1,10 @@
+*,*::after,*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
 @mixin container($pad,$mar,$w,$h) {
     padding: $pad;
     @if $mar {
@@ -18,4 +25,16 @@
 @mixin  responsive_image($width) {
          width: $width;
          max-width: 100%;
+}
+
+@mixin  AlignCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin  AlignCenterTop {
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
 }
