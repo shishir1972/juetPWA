@@ -1,0 +1,146 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+@-webkit-keyframes GLOW {
+  from {
+    opacity: 0.55;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes GLOW {
+  from {
+    opacity: 0.55;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Admission__Upper {
+  width: 100%;
+  height: 45vh;
+  background: url(/static/images/campus.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-origin: padding-box;
+  background-position: center;
+  background-position-y: -50px;
+  color: white;
+}
+
+.Admission__Upper .container {
+  background: rgba(1, 1, 1, 0.5);
+  height: inherit;
+  position: relative;
+}
+
+.Admission__Upper .container label {
+  padding: 1em;
+  position: absolute;
+  bottom: 14%;
+  left: 2%;
+}
+
+.Admission__Upper .container label h1 {
+  font-size: 8.5vmin;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  -webkit-animation: GLOW 3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s infinite;
+          animation: GLOW 3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s infinite;
+}
+
+.Admission__MainWindow {
+  background: #ffffff;
+  padding: 2em;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3.5fr 1fr;
+      grid-template-columns: 3.5fr 1fr;
+  grid-auto-rows: minmax(1fr, 200px);
+  grid-gap: 0.33em;
+}
+
+.Admission__MainWindow .Admission__InfoWindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0.6em;
+}
+
+.Admission__MainWindow .Admission__InfoWindow h1 {
+  margin-bottom: 1em;
+  color: #2980b9;
+  text-align: left;
+  font-size: 1.8rem;
+  letter-spacing: 0.88px;
+}
+
+.Admission__MainWindow .Admission__InfoWindow p {
+  text-align: justify;
+  line-height: 25px;
+  color: #464646;
+  font-size: 0.99rem;
+}
+
+.Admission__MainWindow .Admission__QuickAccess {
+  padding: 1em 1em 1em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-left: 0.06rem solid lightgray;
+}
+
+.Admission__MainWindow .Admission__QuickAccess ul {
+  list-style: none;
+  position: relative;
+}
+
+.Admission__MainWindow .Admission__QuickAccess ul li:nth-child(1) {
+  margin-bottom: 1.2em;
+  letter-spacing: 1px;
+  color: #202020;
+  padding: 0.2em 0.2em 0.2em 0.5em;
+  border-left: 0.22em solid #1c1c83;
+}
+
+.Admission__MainWindow .Admission__QuickAccess ul li:not(:nth-child(1)) {
+  padding-left: 1em;
+  margin-bottom: 0.96em;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.89rem;
+  color: #2980b9;
+}
+
+.Admission__MainWindow .Admission__QuickAccess ul li:not(:nth-child(1)):hover {
+  color: #e67e22;
+}
+/*# sourceMappingURL=Admission.css.map */
