@@ -1,0 +1,57 @@
+{
+    "AdmissionProcedure":[
+        {
+            "id":"Bachelor of Technology [B.Tech.]",
+            "points":[
+                "Minimum qualification for admission to the first year B.Tech courses shall be higher secondary school certificate examination (10+2) with Physics, Chemistry/Computer Science and Mathematics conducted by CBSE, New Delhi, Board of M.P, or an equivalent examination from a recognized Board.",
+                "Non-resident Indian (NRI) candidates shall also be eligible for admission in B.Tech. in accordance with directives of the Government of India/Govt. of Madhya Pradesh, provided they satisfy the criterion of clause (a) as above.",
+                "The admissions to B.Tech. course shall be governed by the rules of the UGC/AICTE or any other competent authority of the Govt. of India or the Govt. of Madhya Pradesh.",
+                "Candidate should have appeared in Joint Entrance Examination (JEE) conducted by CBSE and have passed 10 + 2 from any recognized board for admission in the University with minimum 60% marks in PCM. Production of original JEE admit card and result card at the time of admission is compulsory.",
+                "A Candidate who has qualified the polytechnic diploma course; B.E./B.Tech. – I Year in related branch of engineering or B.Sc. – 03 Yrs degree course with Physics, Chemistry, Mathematics, Computer Science and Electronics from any recognized university, technical board or equivalent shall also be eligible for admission to B.Tech. – II Year through Lateral Entry process.",
+                "Minimum qualification for direct admission to second year Bachelor of Technology course termed as Lateral Entry shall be as per the prevalent norms of the Govt. of India / Government of Madhya Pradesh.",
+                "Admissions shall be done in the University based on merit."
+                ]
+        },
+        {
+            "id":"Master of Technology [M.Tech.]",
+            "points":[
+                "Minimum qualification for admission to the first year M.Tech. shall be B.E./B.Tech. in an appropriate branch with at least 60% marks aggregate or its equivalent CGPA from any recognized university/institutions/technical university/Deemed university or any other qualification as recommended by AICTE for a particular course.",
+                "Applicant of B.E./B.Tech. with CHE/CE branch with 60% or its equivalent CGPA, shall also be eligible for admission in M.Tech. (Environmental Engineering).",
+                "Applicants possessing a valid GATE Score shall be given preference over those candidates who do not possess a valid GATE Score for a full time course.",
+                "Applicants who do not possess a GATE Score, will have to appear in the Post Graduate Entrance Examination, if such an examination is conducted by the University.",
+                "All full time and part time candidates who are sponsored for PG studies must have at least two years experience in the relevant field.",
+                "The admissions to M.Tech. course shall be governed by the rules of UGC/AICTE or the Govt. of Madhya Pradesh or any other competent authority.",
+                "Admissions shall be done in the university based on merit."
+                ]
+        },
+        {
+            "id":"Doctor of Philosophy [Ph.D.]",
+            "points":[
+                "Minimum qualification for admission to the first year Ph.D. in Engineering Stream shall be M.E./M.Tech. in appropriate branch with at least 60% marks aggregate or its equivalent CGPA from any recognized university/institutions/technical university/Deemed university or any other qualification as recommended by AICTE for a particular course.",
+                "Minimum qualification for admission to the first year Ph.D. in Science/Mathematics/humanities/Management Stream shall be Master's Degree/M.Phil. in appropriate specialization with at least 60% marks aggregate or its equivalent CGPA from any recognized university/institutions/technical university/Deemed university or any other qualification as recommended by AICTE for a particular course.",
+                "The Ph.D. Entrance Test will be conducted by the university; all applicants who qualify in the entrance will have to appear for a personal interview. Candidates are required to discuss their research interests and proposed research areas at the time of the Interview.",
+                "Applicants who have qualified GATE/SLET/UGC/CSIR (JRF) shall be given preference over those candidates who do not possess GATE/SLET/UGC/CSIR (JRF) on a full-time basis.",
+                "All full-time & part-time candidates who have been sponsored for Ph.D. studies must have at least two years experience in the relevant field.",
+                "The admission to the Ph.D. course shall be governed by the rules of higher education/technical education department of Govt. of India and Govt. of Madhya Pradesh or any other competent authority.",
+                "Admissions shall be done in the University based on merit."
+                ]
+        },
+        {
+            "id":"Master of Science [M.Sc.]",
+            "points":[
+                "Minimum qualification for admission to the first year M.Sc. shall be B.Sc./B.Sc.(Hons.) in appropriate subjects from any recognized university/institutions/technical university/Deemed university or any other qualification as recommended by UGC/AICTE for a particular course.",
+                "The admissions to M.Sc. programme shall be governed by the rules of UGC/AICTE or the Govt. of Madhya Pradesh or any other competent authority.",
+                "Admissions shall be done in the University based on merit."
+                ]
+        },
+        {
+            "id":"Bachelor of Science (Hons.) [B.Sc. (Hons.)]",
+            "points":[
+                "Minimum qualification for admission to the first year B. Sc. (Hons.) shall be the qualifying higher secondary school certificate examination (10+2) scheme with appropriate subjects conducted by CBSE, New Delhi, Board of M.P. or an equivalent examination from a recognized Board with minimum marks as decided by the University/UGC guidelines.",
+                "Non resident Indian (NRI) candidates shall also be eligible for admission in B.Sc (Hons) in accordance with directives of the Government of India/Govt of Madhya Pradesh.",
+                "Admission shall be done based on merit of 10+2 examination results."
+                ]
+        }
+
+    ]
+}

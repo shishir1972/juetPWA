@@ -1,0 +1,59 @@
+{
+    "IndianStudent":{
+                "Academic":[
+                        {
+                            "CourseName":"B.Tech",
+                            "TuitionFee":"78500",
+                            "DevelopmentFee":"14000",
+                            "CautionMoney":"10000"
+                        },
+                        {
+                            "CourseName":"M.Tech",
+                            "TuitionFee":"40500",
+                            "DevelopmentFee":"7000",
+                            "CautionMoney":"5000"
+                        },
+                        {
+                            "CourseName":"Ph.D. (Full-Time)**",
+                            "TuitionFee":"17000",
+                            "DevelopmentFee":"3000",
+                            "CautionMoney":"5000"
+                        },{
+                            "CourseName":"Ph.D. (Sponsored Candidate)",
+                            "TuitionFee":"20000",
+                            "DevelopmentFee":null,
+                            "CautionMoney":"5000"
+                        },
+                        {
+                            "CourseName":"B.Sc./B.Sc. (Hons.)",
+                            "TuitionFee":"20000",
+                            "DevelopmentFee":"5000",
+                            "CautionMoney":"5000"
+                        },
+                        {
+                            "CourseName":"M.Sc.",
+                            "TuitionFee":"78500",
+                            "DevelopmentFee":null,
+                            "CautionMoney":"5000"
+                        }
+                        ],
+                "Hostel":{
+                         "Fee":"50000",
+                         "isFood_Laundry":true
+                     }
+                    },
+     "NRIStudent":{
+           "Academic":[
+                    {
+                    "CourseName":"B.Tech",
+                    "TuitionFee":"4000 USD",
+                    "DevelopmentFee":"1000 USD"
+                    }
+                 ],
+            "Hostel":{
+                    "Fee":"2000 USD",
+                    "isFood_Laundry":true
+                }
+            }                   
+
+}
