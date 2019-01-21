@@ -5,7 +5,7 @@ class FooterAddContact extends Component
 render()
 {
     return(
-        <div class="ContactInfo">
+        <div className="ContactInfo">
         <ul>
             <li><h1>Contact us</h1></li>   
             <li><img src="/static/images/Jaypee.png" style={{"maxWidth":"100%","width":"60%"}} /></li>

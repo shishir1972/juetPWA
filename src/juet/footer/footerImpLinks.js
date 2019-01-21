@@ -5,7 +5,7 @@ class FooterAddImpLinks extends Component
 render()
 {
     return(
-        <div class="ImportantLinks">
+        <div className="ImportantLinks">
         <ul>
                 <li><h1>Important Links</h1></li>   
                 <li>NIRF Data</li>

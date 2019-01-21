@@ -5,7 +5,7 @@ class FooterAddDisclosures extends Component
 render()
 {
     return(
-        <div class="ImportantDisclosures">
+        <div className="ImportantDisclosures">
         <ul>
         <li><h1>Important Disclosures</h1></li>    
         <li>NIRF Data</li>

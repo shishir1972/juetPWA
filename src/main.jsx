@@ -1,6 +1,5 @@
 import React from 'react';
 import {Switch,Route,withRouter} from 'react-router-dom'
-
 import NavBarPackage from "./juet/header/navbarMain.jsx";
 import FooterMake from './juet/footer/footerMain.jsx';
 
@@ -22,7 +21,9 @@ class IndexRender extends React.PureComponent{
               
                 <NavBarPackage/>
                 <Switch>
-                {routes.map(({ path, exact, component: C, ...rest }) => (
+                {routes.map(({ path, exact, component: C,childRoutes, ...rest }) => {
+                  
+                        return (
                             <Route
                                 key={path}
                                 path={path}
@@ -31,7 +32,10 @@ class IndexRender extends React.PureComponent{
                                 <C {...props} {...rest} />
                                 )}
                             />
-                 ))}
+                            )
+                    
+                
+                })}
                 </Switch>
                 <FooterMake />
                  

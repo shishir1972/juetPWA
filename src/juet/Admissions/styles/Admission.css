@@ -86,11 +86,41 @@
 }
 
 .Admission__MainWindow .Admission__InfoWindow h1 {
-  margin-bottom: 1em;
-  color: #2980b9;
+  color: #182C61;
   text-align: left;
-  font-size: 1.8rem;
+  font-size: 3vmax;
+  padding: 0 0 0.5em 0;
   letter-spacing: 0.88px;
+}
+
+.Admission__MainWindow .Admission__InfoWindow .line {
+  padding: 0.03rem;
+  background: lightgray;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.Admission__MainWindow .Admission__InfoWindow .AdmissionProcedure ul {
+  list-style: none;
+}
+
+.Admission__MainWindow .Admission__InfoWindow .AdmissionProcedure ul li h3 {
+  margin-bottom: 0.7em;
+  color: #2b46b4;
+}
+
+.Admission__MainWindow .Admission__InfoWindow .AdmissionProcedure ul li .ProcedurePoints ul {
+  list-style: none;
+  padding: 0.5em;
+}
+
+.Admission__MainWindow .Admission__InfoWindow .AdmissionProcedure ul li .ProcedurePoints ul li {
+  margin-bottom: 0.66em;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  color: #4e4e4e;
+  font-family: 'Abel', sans-serif;
 }
 
 .Admission__MainWindow .Admission__InfoWindow p {
@@ -123,12 +153,19 @@
   position: relative;
 }
 
+.Admission__MainWindow .Admission__QuickAccess ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .Admission__MainWindow .Admission__QuickAccess ul li:nth-child(1) {
   margin-bottom: 1.2em;
   letter-spacing: 1px;
-  color: #202020;
+  color: #182C61;
+  width: 100%;
+  font-size: 3vmin;
   padding: 0.2em 0.2em 0.2em 0.5em;
-  border-left: 0.22em solid #1c1c83;
+  border-left: 0.22em solid #ffa502;
 }
 
 .Admission__MainWindow .Admission__QuickAccess ul li:not(:nth-child(1)) {
@@ -137,10 +174,31 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 0.89rem;
-  color: #2980b9;
+  color: #3742fa;
 }
 
 .Admission__MainWindow .Admission__QuickAccess ul li:not(:nth-child(1)):hover {
   color: #e67e22;
+}
+
+@media screen and (max-width: 777px) {
+  .Admission__MainWindow {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
+  .Admission__MainWindow .Admission__QuickAccess {
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 /*# sourceMappingURL=Admission.css.map */

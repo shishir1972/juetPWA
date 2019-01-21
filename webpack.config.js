@@ -15,14 +15,16 @@ const Dotenv = require('dotenv-webpack');
 var devConfig = {
     entry:['./src/browser/index.jsx'],
     output:{
-        path:path.resolve(__dirname,'Devbuild'),
-        filename:'juet.[hash].js',
+        // path:path.resolve(__dirname,'Devbuild'),
+        filename:'juetDevbundle.js',
     },
     mode: 'development',
   devtool: 'inline-source-map',
     devServer:{
         compress: true,
         port: 4000,
+        // publicPath: "/",
+        // contentBase: "./Devbuild",
         historyApiFallback: true
     },
     module:{
@@ -54,7 +56,7 @@ var devConfig = {
         }),
         new CleanWebpackPlugin(['Devbuild']),
         new MiniCssExtractPlugin({
-            filename:'[hash].css',
+            filename:'main.css',
             chunkFilename: '[id].css' 
           }),
           new HtmlWebPackPlugin({

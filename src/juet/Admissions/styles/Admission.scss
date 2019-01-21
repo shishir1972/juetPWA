@@ -60,11 +60,48 @@
        padding: 0.6em;
        h1
        {
-           margin-bottom: 1em;
-           color:#2980b9;
+           color:#182C61;
            text-align: left;
-           font-size: 1.8rem;
+           font-size: 3vmax;
+           padding: 0 0 0.5em 0;
            letter-spacing: 0.88px;
+       }
+       .line
+       {
+           padding: 0.03rem;
+           background: lightgray;
+           width: 100%;
+           margin-bottom: 1em;
+       }
+       .AdmissionProcedure
+       {
+          ul
+          {
+              list-style: none;
+              li
+              {
+                 h3{
+                    margin-bottom: 0.7em;
+                    color:#2b46b4;
+                 } 
+                  .ProcedurePoints
+                  {
+                      ul{
+                          list-style: none;
+                          padding: 0.5em;
+                          li
+                          {
+                              margin-bottom: 0.66em;
+                              font-size:1rem;
+                              letter-spacing: 0.5px;
+                              font-weight: bold;
+                              color:#4e4e4e;
+                              font-family: 'Abel', sans-serif;
+                          }
+                      }
+                  }
+              }
+          }
        }
        p
        {
@@ -88,13 +125,20 @@
            position: relative;
            li
            {
+               a
+               {
+                   text-decoration: none;
+                   color: inherit;
+               }
                &:nth-child(1)
                {
                    margin-bottom: 1.2em;
                    letter-spacing: 1px;
-                   color:#202020;
+                   color:#182C61;
+                   width: 100%;
+                   font-size: 3vmin;
                    padding: 0.2em 0.2em 0.2em 0.5em;
-                   border-left: 0.22em solid #1c1c83;
+                   border-left: 0.22em solid #ffa502;
                }
               
                &:not(:nth-child(1))
@@ -104,7 +148,7 @@
                 cursor: pointer;
                 font-weight: bold;
                 font-size: 0.89rem;
-                color:#2980b9;
+                color:#3742fa;
 
                 &:hover
                 {
@@ -115,6 +159,20 @@
 
        }
    }
+  
+ 
+}
 
-
+@media screen and (max-width:777px) {
+    .Admission__MainWindow{
+        display: grid;
+        grid-template-columns: none;
+        .Admission__QuickAccess
+        {
+            border:none;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
 }

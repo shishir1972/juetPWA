@@ -19,6 +19,7 @@ import configureStore from '../redux/configureStore'
 require('dotenv').config()
 const compression = require('compression')
 import * as faculty from './middlewares/FacultyRecord'
+import * as admission from './middlewares/Admission'
 const app = express()
 
 app.set('view engine','ejs')
@@ -31,6 +32,7 @@ app.use(express.static('views',{ maxage: '604800' }))
 app.use('/juet',express.static('build',{ maxage: '604800' }))
 app.use("/static",express.static('static',{ maxage: '604800' }))
 app.use('/api/faculty',faculty)
+app.use('/api/admission',admission)
 
 const juetStore = configureStore({})
 

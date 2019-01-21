@@ -1,3 +1,11 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
 .AnnouncementsNew {
   background: #F9F9F9;
   padding: 2em;
