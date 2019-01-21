@@ -14,7 +14,7 @@ const RenderSubNavMoreOptions = (props) =>{
         return (
             <div className="SubNavMoreOptions">
                 <ul>
-                    {props.renderData.map((subOptionsData)=>(<li key={subOptionsData.id}><a href={subOptionsData.Link_to}>{subOptionsData.title}</a></li>))}
+                    {props.renderData.map((subOptionsData)=>(<li key={subOptionsData.id}><Link to={subOptionsData.Link_to}>{subOptionsData.title}</Link></li>))}
                 </ul>
             </div>
         )
@@ -79,15 +79,15 @@ class SecondNavbar extends Component {
                 ],
                 FacultiesAndDepartments: [
                     {id: 'SubNavOptions4_2', Link_to: '', title: 'Faculty of Engineering',subOptions:[
-                        {id:'subOption1_SubNavOptions4_2',Link_to:'/juet/faculty/Chemical',title:'Chemical Engineering'},
-                        {id:'subOption2_SubNavOptions4_2',Link_to:'/juet/faculty/Civil',title:'Civil Engineering'},
-                        {id:'subOption3_SubNavOptions4_2',Link_to:'/juet/faculty/Computer Science',title:'Computer Science & Engineering'},
-                        {id:'subOption4_SubNavOptions4_2',Link_to:'/juet/faculty/Electronics',title:'Electronics & Communication Engineering'},
-                        {id:'subOption5_SubNavOptions4_2',Link_to:'/juet/faculty/Mechanical',title:'Mechanical Engineering'},
-                        {id:'subOption6_SubNavOptions4_2',Link_to:'/juet/faculty/Chemistry',title:'Chemistry'},
-                        {id:'subOption7_SubNavOptions4_2',Link_to:'/juet/faculty/HSS',title:'Humanities and Social Sciences'},
-                        {id:'subOption8_SubNavOptions4_2',Link_to:'/juet/faculty/Mathematics',title:'Mathematics'},
-                        {id:'subOption9_SubNavOptions4_2',Link_to:'/juet/faculty/Physics',title:'Physics'},
+                        {id:'subOption1_SubNavOptions4_2',Link_to:'/faculty/Chemical',title:'Chemical Engineering'},
+                        {id:'subOption2_SubNavOptions4_2',Link_to:'/faculty/Civil',title:'Civil Engineering'},
+                        {id:'subOption3_SubNavOptions4_2',Link_to:`/faculty/${encodeURI('Computer Science')}`,title:'Computer Science & Engineering'},
+                        {id:'subOption4_SubNavOptions4_2',Link_to:'/faculty/Electronics',title:'Electronics & Communication Engineering'},
+                        {id:'subOption5_SubNavOptions4_2',Link_to:'/faculty/Mechanical',title:'Mechanical Engineering'},
+                        {id:'subOption6_SubNavOptions4_2',Link_to:'/faculty/Chemistry',title:'Chemistry'},
+                        {id:'subOption7_SubNavOptions4_2',Link_to:'/faculty/HSS',title:'Humanities and Social Sciences'},
+                        {id:'subOption8_SubNavOptions4_2',Link_to:'/faculty/Mathematics',title:'Mathematics'},
+                        {id:'subOption9_SubNavOptions4_2',Link_to:'/faculty/Physics',title:'Physics'},
                         ]},
                     {id: 'SubNavOptions4_3', Link_to: '', title: 'Faculty of Mathematical Sciences',subOptions:[]},
                     {id: 'SubNavOptions4_4', Link_to: '', title: 'Faculty of Sciences',subOptions:[]}

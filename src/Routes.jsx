@@ -1,6 +1,7 @@
 import BodyMainLandingPage from "./juet/LandingPage/bodyMain.jsx";
 import About from '../src/About.jsx'
 import FacultyListAll from './juet/faculty/FacultyListAll'
+import FacultyDepartmentProfile from './juet/faculty/FacultyListDepartmentWise'
 import AdmissionHome from './juet/Admissions/AdmissionMain'
 import FeeStructure from './juet/Admissions/FeeStructure'
 
@@ -19,6 +20,11 @@ export const routes = [
         path: "/faculty",
         component: FacultyListAll,
         exact: true
+    },
+    {
+       path:"/faculty/:dept",
+       component:FacultyDepartmentProfile,
+       exact:true
     },
     {
         path:"/admissions",

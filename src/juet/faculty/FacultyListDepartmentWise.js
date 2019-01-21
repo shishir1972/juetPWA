@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import 'isomorphic-fetch';
+import fetch from 'isomorphic-fetch';
 import {Link} from 'react-router-dom'
 import './styles/faculty.css';
 const DisplayDepartmentFaculties = (props)=> {
@@ -26,7 +26,7 @@ const DisplayDepartmentFaculties = (props)=> {
                         </div>
                     </div>  
                     <div class="facultyBriefButton">
-                        <div class="BriefButton"><Link href={`/juet/faculty/${d.department}/${d.id}`}><a>Brief Profile</a></Link></div>
+                        <div class="BriefButton"><Link to={`/faculty/${d.department}/${d.id}`}><a>Brief Profile</a></Link></div>
                     </div>
                 </div>
                 )
@@ -42,26 +42,38 @@ class FacultyDepartmentProfile extends Component
             faculty_data:[],
             isLoading:true,
             status:'',
-            whichDepartment:props.itsDepartment,
-            liveStatus:props.liveStatus
+            whichDepartment:props.match.params.dept,
+            liveStatus:true
         }
     }
-    componentDidMount() {
-        fetch(`/api/faculty/${encodeURI(this.state.whichDepartment)}`)
-            .then((res)=>{
-                this.setState({faculty_data:res.data,isLoading:false,status:res.data.status})
-            })
-
+    componentWillReceiveProps(newProps)
+    {
+       
+            this.setState({whichDepartment:newProps.match.params.dept})
+            document.title = `${newProps.match.params.dept} Department@Faculties - Jaypee University of Engineering and Technology, Guna`;
+            fetch(`${process.env.FETCH_URL}/api/faculty/${encodeURI(newProps.match.params.dept)}`)
+        .then(res => res.json())
+         .then((resData)=>{
+             this.setState({faculty_data:resData,isLoading:false})
+         }) 
+    }
+    componentDidMount()
+    {
+        document.title = `${this.state.whichDepartment} Department@Faculties - Jaypee University of Engineering and Technology, Guna`;
+        fetch(`${process.env.FETCH_URL}/api/faculty/${encodeURI(this.state.whichDepartment)}`)
+        .then(res => res.json())
+         .then((resData)=>{
+             this.setState({faculty_data:resData,isLoading:false})
+         })  
     }
     render()
     {
-
         if(this.state.liveStatus)
         {
             return(
                 <div>
                 <h1 style={{textAlign:'center'}}>Department of {this.state.whichDepartment}</h1><hr/>    
-               <DisplayDepartmentFaculties record={this.state.faculty_data}/>  
+            {this.state.faculty_data && <DisplayDepartmentFaculties record={this.state.faculty_data}/> }
                 </div>
            
             )
