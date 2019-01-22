@@ -5,53 +5,62 @@ import AdmissionUpperLook from './AdmissionUpperLook'
 import QuickAccess from './QuickAccess';
 import AdmissionInfoLook from './AdmissionInfoLook';
 
-import {connect} from 'react-redux'
-import {admissionProcedure} from '../../redux/actions/ADMISSION/fetchProcedure'
-class AdmissionHome extends Component {
-    static fetchData(store)
-    {
-        return store.dispatch(admissionProcedure())
-    }
+import Ionicon from 'react-ionicons';
+export default class AdmissionHome extends Component {
+ 
     constructor(props)
     {
         super(props)
-        this.state = {
-            procedureData:undefined
-        }
+       
     }
     componentDidMount()
     {
         document.title="Admissions - Jaypee University of Engineering And Technology, Guna"
-        this.props.onFetchProcedures()
+    
     }
     render() {
     return (
         <section id="Admissions">
     
-        <AdmissionUpperLook UpperTitle="Admissions 2019" />
+        <AdmissionUpperLook UpperTitle={`Admissions ${new Date().getFullYear()}`} />
          
         <div className="Admission__MainWindow">
-           <AdmissionInfoLook MainTitle="Admission Procedure" >
-         <div className="AdmissionProcedure">
-           {this.props.Admission.AdmissionData && this.props.Admission.AdmissionData.AdmissionProcedure.map((data,i)=>{
-                return (
-                    <ul>
-                        <li key={data.id}><h3>{data.id}</h3>
-                           <div className="ProcedurePoints">
-                               <ul>
-                                {data.points.map((pointsData,i)=>{
-                                        return (
-                                            <li key={i}>{`${i+1}:) ${pointsData}`}</li>
-                                        )
-                                    })}
-                               </ul>
-                           </div>
-                        </li>
-                          
-                    </ul>
-                )
-            })}
-           </div>
+           <AdmissionInfoLook MainTitle={`B.Tech Admission - ${new Date().getFullYear()}`} >
+           <div className="AdmissionApplication">
+                    <div className="__card">
+                        <div className="__cardImage"><img src='/static/images/rd.jpg' alt="__card" /></div>
+                       <div className="__cardTitle">B.Tech. Programme [ JEE Rank Based ]</div>
+                       <div className="__cardDetails">
+                         <ul>
+                             <li>Important Dates</li>
+                             <li>Download Offline Application Form</li>
+                         </ul>
+                       </div>
+                       <div className="__cardButton">Apply Online</div>
+                    </div>
+                    <div className="__card">
+                        <div className="__cardImage"><img src='/static/images/isf.jpg' alt="__card" /></div>
+                        <div className="__cardTitle">B.Tech. Programme [ 10+2 Merit Based ]</div>
+                        <div className="__cardDetails">
+                        <ul>
+                             <li>Important Dates</li>
+                             <li>Download Offline Application Form</li>
+                         </ul>
+                         </div>
+                        <div className="__cardButton">Apply Online</div>
+                     </div>
+                     <div className="__card">
+                        <div className="__cardImage"><img src='/static/images/cl5.jpg' alt="__card" /></div>
+                        <div className="__cardTitle">B.Tech. Programme [ Merit Based Lateral Entry in 2nd Year ]</div>
+                        <div className="__cardDetails">
+                        <ul>
+                             <li>Important Dates</li>
+                             <li>Download Offline Application Form</li>
+                         </ul>
+                         </div>
+                        <div className="__cardButton">Apply Online</div>
+                     </div>
+                </div>  
            </AdmissionInfoLook>
           <QuickAccess />
         </div>
@@ -61,15 +70,3 @@ class AdmissionHome extends Component {
   }
 }
 
-const MapStateToProps = (state) => {
-    return {
-         Admission:state.admissionStore
-    }
-}
-const MapPropsToDispatch = (dispatch) => {
-    return {
-        onFetchProcedures : () => dispatch(admissionProcedure())
-    }
-}
-
-export default connect(MapStateToProps,MapPropsToDispatch)(AdmissionHome)

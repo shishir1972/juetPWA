@@ -58,6 +58,7 @@
        flex-direction: column;
        justify-content: flex-start;
        padding: 0.6em;
+       width: 100%;
        h1
        {
            color:#182C61;
@@ -72,6 +73,117 @@
            background: lightgray;
            width: 100%;
            margin-bottom: 1em;
+       }
+       .AdmissionApplication
+       {
+           width:100%;
+           overflow: hidden;
+           padding: 1em;
+           background: #ffffff;
+           box-sizing: border-box;
+           @include gridMaker(repeat(auto-fit,minmax(250px,1fr)),minmax(380px,1fr),2.5em);
+           .__card
+           {
+               width: 100%;
+               padding: 0.3em;
+               display: flex;
+               justify-content: flex-start;
+               align-items: flex-start;
+               flex-direction: column;
+               overflow: hidden;
+               position: relative;
+               box-shadow:1px 5px 16px 2px #818181;
+              
+               .__cardImage
+                {
+                    width: 100%;
+                    position: relative;
+                    height: 10em;
+                    overflow: hidden;
+                    position: relative;
+                    background: rgba(1,1,1,0.5);
+                    img
+                    {
+                        @include responsive_image(100%);
+                        transform: scale(1,1);
+                        height: 100%;
+                        cursor: pointer;
+                        filter: blur(0.5px) brightness(80%);
+                        transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s,filter cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
+                    &:hover
+                    {
+                        transform: scale(1.2,1.2);
+                        filter: blur(0px) brightness(100%);
+                        transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s,filter cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
+                    }
+                    }
+                }
+               
+                .__cardTitle
+                {
+                  margin-top: 0.5em;
+                  font-size: 1.2rem;
+                  font-weight: bold;
+                  color: #2b46b4;
+                  padding: 0.5em;
+                  letter-spacing: 0.59px;
+                  font-family: 'Alegreya Sans',sans-serif;
+                  text-align: left;
+                }
+                .__cardDetails
+                {
+                    ul
+                    {
+                        list-style: none;
+                        padding: 1em;
+                        li, li a
+                        {
+                            font-family: 'Abel',sans-serif;
+                            margin-bottom: 0.55em;
+                            font-weight: bold;
+                            font-size: 0.92rem;
+                            text-decoration: none;
+                            color: #696969;
+                            letter-spacing: 0.6px;
+                            cursor: pointer;
+
+                            &:hover
+                            {
+                               color: crimson;
+                            }
+                            
+                        }
+                    }
+                
+                }
+                .__cardButton
+                {
+                    padding:0.8em;
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    z-index: 20;
+                    bottom: 0.3em;
+                    width: 100%;
+                    text-align: center;
+                    background: linear-gradient(180deg,#2980b9,#094e7c);
+                    color:white;
+                    letter-spacing: 0.6px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    border-radius: 0.1em;
+                    transform: scale(0.95,0.95);
+                    transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
+
+                    &:hover
+                    {
+                        transform: scale(1,1);
+                        transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
+                        background: linear-gradient(180deg,#1c8648,#096e35);
+                    }
+                }
+           }
        }
        .AdmissionProcedure
        {

@@ -3,6 +3,7 @@ import About from '../src/About.jsx'
 import FacultyListAll from './juet/faculty/FacultyListAll'
 import FacultyDepartmentProfile from './juet/faculty/FacultyListDepartmentWise'
 import AdmissionHome from './juet/Admissions/AdmissionMain'
+import AdmissionProcedure from './juet/Admissions/AdmissionProcedure'
 import FeeStructure from './juet/Admissions/FeeStructure'
 
 export const routes = [
@@ -29,6 +30,11 @@ export const routes = [
     {
         path:"/admissions",
         component:AdmissionHome,
+        exact:true,
+    },
+    {
+        path:"/admissions/Procedure",
+        component:AdmissionProcedure,
         exact:true,
     },
     {

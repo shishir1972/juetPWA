@@ -29,9 +29,9 @@ export default class FeeStructure extends React.Component
        {
         return (
             <div>
-                <AdmissionUpperLook UpperTitle = "Admissions 2019" />
+                <AdmissionUpperLook UpperTitle={`Admissions ${new Date().getFullYear()}`} />
                 <div className="Admission__MainWindow">
-                <AdmissionInfoLook MainTitle="Academic Fee Structure 2019">
+                <AdmissionInfoLook MainTitle={`Academic Fee Structure - ${new Date().getFullYear()}`}>
                  {this.state.FeesData ?  <ul>
                       {this.state.FeesData.IndianStudent.Academic.map((data,i)=>{
                           return (<li key={i}>{data.CourseName}</li>)
