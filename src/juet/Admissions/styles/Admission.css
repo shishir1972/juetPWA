@@ -59,7 +59,7 @@
 }
 
 .Admission__MainWindow {
-  background: #ffffff;
+  background: #F9F9F9;
   padding: 2em;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -89,7 +89,7 @@
 .Admission__MainWindow .Admission__InfoWindow h1 {
   color: #182C61;
   text-align: left;
-  font-size: 3vmax;
+  font-size: 5.5vmin;
   padding: 0 0 0.5em 0;
   letter-spacing: 0.88px;
 }
@@ -101,18 +101,49 @@
   margin-bottom: 1em;
 }
 
+.Admission__MainWindow .Admission__InfoWindow .SubTitle {
+  margin-left: 0.5em;
+  font-size: 5vmin;
+  color: #3a8ac0;
+  text-align: left;
+  width: 100%;
+  font-family: 'Abel',sans-serif;
+}
+
+.Admission__MainWindow .Admission__InfoWindow .EducationLoan {
+  width: 100%;
+}
+
+.Admission__MainWindow .Admission__InfoWindow .EducationLoan p {
+  text-align: justify;
+  font-family: 'Abel',sans-serif;
+  color: #4e4e4e;
+  letter-spacing: 0.6px;
+  font-weight: bold;
+  font-size: 0.99rem;
+  margin-bottom: 1.5em;
+}
+
+.Admission__MainWindow .Admission__InfoWindow .EducationLoan .__EducationLoanOtherInfo h3 {
+  color: #182C61;
+  margin-bottom: 0.8em;
+  text-transform: capitalize;
+  line-height: 28px;
+  text-align: left;
+}
+
 .Admission__MainWindow .Admission__InfoWindow .AdmissionApplication {
   width: 100%;
   overflow: hidden;
   padding: 1em;
-  background: #ffffff;
+  background: inherit;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: minmax(380px, 1fr);
+  grid-auto-rows: minmax(400px, 1fr);
   grid-gap: 2.5em;
 }
 
@@ -132,10 +163,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: white;
   overflow: hidden;
   position: relative;
-  -webkit-box-shadow: 1px 5px 16px 2px #818181;
-          box-shadow: 1px 5px 16px 2px #818181;
+  border: 0.01em solid lightgray;
 }
 
 .Admission__MainWindow .Admission__InfoWindow .AdmissionApplication .__card .__cardImage {
@@ -195,7 +226,7 @@
   font-weight: bold;
   font-size: 0.92rem;
   text-decoration: none;
-  color: #696969;
+  color: #7f8c8d;
   letter-spacing: 0.6px;
   cursor: pointer;
 }
@@ -213,8 +244,8 @@
   bottom: 0.3em;
   width: 100%;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#2980b9), to(#094e7c));
-  background: linear-gradient(180deg, #2980b9, #094e7c);
+  background: -webkit-gradient(linear, left top, left bottom, from(#479ed8), to(#094e7c));
+  background: linear-gradient(180deg, #479ed8, #094e7c);
   color: white;
   letter-spacing: 0.6px;
   font-weight: bold;
@@ -222,21 +253,26 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 0.1em;
-  -webkit-transform: scale(0.95, 0.95);
-          transform: scale(0.95, 0.95);
-  -webkit-transition: -webkit-transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
-  transition: -webkit-transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
-  transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
-  transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s, -webkit-transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
+  -webkit-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
+  -webkit-transition: -webkit-transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s;
+  transition: -webkit-transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s;
+  transition: transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s;
+  transition: transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s, -webkit-transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s;
+}
+
+.Admission__MainWindow .Admission__InfoWindow .AdmissionApplication .__card .__cardButton a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .Admission__MainWindow .Admission__InfoWindow .AdmissionApplication .__card .__cardButton:hover {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-  -webkit-transition: -webkit-transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
-  transition: -webkit-transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
-  transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
-  transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s, -webkit-transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.44s;
+  -webkit-transform: scale(0.95, 0.95);
+          transform: scale(0.95, 0.95);
+  -webkit-transition: -webkit-transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s;
+  transition: -webkit-transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s;
+  transition: transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s;
+  transition: transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s, -webkit-transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.44s;
   background: -webkit-gradient(linear, left top, left bottom, from(#1c8648), to(#096e35));
   background: linear-gradient(180deg, #1c8648, #096e35);
 }

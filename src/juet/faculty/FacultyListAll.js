@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import './styles/faculty.css';
 import {connect} from 'react-redux'
 import {facultyAll} from '../../redux/actions/FACULTY/fetchFaculty'
-import Ionicon from 'react-ionicons'
+import {LoadingView} from '../LoadingView/Loading'
 import { bindActionCreators } from 'redux'
 
 class DisplayFaculty extends Component 
@@ -85,10 +85,8 @@ class FacultyListAll extends Component
                       
                     {
                         
-                        this.props.faculty.isLoading ? 
-                        <div style={{position:'relative',background:'transparent',top:'0',height:'30vh',padding:'1em',width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}}>
-                        <Ionicon icon="ios-sync" fontSize="100px" color="#00355f" rotate={true} />
-                        </div> : 
+                         this.props.faculty.isLoading != false ? 
+                         <LoadingView />  : 
                          <div><div className="facultyBackground">
                          <div className="facultyHeadingTag"></div>
                          </div>

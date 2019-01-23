@@ -378,6 +378,11 @@
     cursor: pointer;
     transition: background 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+.button1 a
+{
+    text-decoration: none;
+    color:inherit;
+}
 .button1:hover
 {
     background: transparent;

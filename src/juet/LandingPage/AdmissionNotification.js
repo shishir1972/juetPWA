@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import {Link} from 'react-router-dom'
 class AdmissionNotification extends Component
 {
     constructor(props)
@@ -33,7 +33,7 @@ class AdmissionNotification extends Component
                         <h1>{this.state.MessageToShow}</h1>
                     </div>
                     <div className="AdmissionButton">
-                        <div className="button1">{this.state.ButtonOptionText}</div>
+                        <div className="button1"><Link to="/admissions">{this.state.ButtonOptionText}</Link></div>
                     </div>
                 </div>
             )

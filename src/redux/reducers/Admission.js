@@ -1,4 +1,4 @@
-import { GET_ADMISSION_PROCEDURE_POINTS } from '../actions/actionTypes'
+import { GET_ADMISSION_PROCEDURE_POINTS, GET_ADMISSION_PROGRAMMES_DETAILS } from '../actions/actionTypes'
 
 const initialState = {
     AdmissionData:undefined
@@ -12,6 +12,12 @@ const admissionHandler = (state = initialState,action) => {
                                                     ...state,
                                                     AdmissionData:action.payload
                                                 }
+               
+               case GET_ADMISSION_PROGRAMMES_DETAILS : 
+                                            return {
+                                                ...state,
+                                                AdmissionProgrammes:action.payload
+                                            }                                 
                default : 
                           return state                                 
            }

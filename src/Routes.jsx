@@ -5,6 +5,7 @@ import FacultyDepartmentProfile from './juet/faculty/FacultyListDepartmentWise'
 import AdmissionHome from './juet/Admissions/AdmissionMain'
 import AdmissionProcedure from './juet/Admissions/AdmissionProcedure'
 import FeeStructure from './juet/Admissions/FeeStructure'
+import EducationLoan from './juet/Admissions/EducationLoan'
 
 export const routes = [
     {
@@ -35,6 +36,11 @@ export const routes = [
     {
         path:"/admissions/Procedure",
         component:AdmissionProcedure,
+        exact:true,
+    },
+    {
+        path:"/admissions/EDULoan",
+        component:EducationLoan,
         exact:true,
     },
     {

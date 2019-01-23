@@ -1,0 +1,63 @@
+{
+    "BTech":{
+           "UpperTitle":"B.Tech - Admission",
+           "SubCategories":[
+               {
+               "quota":"B.Tech. Programme [ JEE Rank Based ]",
+               "imagePath":"/static/images/rd.jpg",
+               "otherLinks":[
+                             {"title":"Important Dates","LinkTo":"/"},
+                             {"title":"Download Offline Application Form","LinkTo":"/"},
+                             {"title":"Download Brochure","LinkTo":"/"}
+                            ]
+                },
+                {
+                    "quota":"B.Tech. Programme [ 10+2 Merit Based ]",
+                    "imagePath":"/static/images/isf.jpg",
+                    "otherLinks":[
+                                  {"title":"Important Dates","LinkTo":"/"},
+                                  {"title":"Download Offline Application Form","LinkTo":"/"},
+                                  {"title":"Download Brochure","LinkTo":"/"}
+                                 ]
+                },
+                {
+                    "quota":"B.Tech. Programme [ Merit Based Lateral Entry in 2nd Year ]",
+                    "imagePath":"/static/images/cl5.jpg",
+                    "otherLinks":[
+                                  {"title":"Important Dates","LinkTo":"/"},
+                                  {"title":"Download Offline Application Form","LinkTo":"/"},
+                                  {"title":"Download Brochure","LinkTo":"/"}
+                                 ]
+                }
+                           ],
+              "ApplyOnlineLink":"/"
+    },
+    "MTech":{
+        "UpperTitle":"M.Tech - Admission",
+        "SubCategories":[
+            {
+            "quota":"M.Tech. Programme [ GATE Score Based ]",
+            "imagePath":"/static/images/mtech.jpg",
+            "otherLinks":[
+                          {"title":"Important Dates","LinkTo":"/"},
+                          {"title":"Download Offline Application Form","LinkTo":"/"},
+                          {"title":"Download Brochure","LinkTo":"/"}
+                         ]
+             },
+             {
+                 "quota":"M.Tech. Programme [ PGET Based ]",
+                 "imagePath":"/static/images/isf.jpg",
+                 "otherLinks":[
+                               {"title":"Important Dates","LinkTo":"/"},
+                               {"title":"Download Offline Application Form","LinkTo":"/"},
+                               {"title":"Format PGET","LinkTo":"/"},
+                               {"title":"PGET Syllabus for M.Tech.","LinkTo":"/"}
+                              ]
+             }
+                        ],
+           "ApplyOnlineLink":"/"
+        },
+    "PhD":{},
+    "BSc":{},
+    "MSc":{}
+}

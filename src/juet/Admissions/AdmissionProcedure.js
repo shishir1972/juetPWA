@@ -7,6 +7,7 @@ import AdmissionInfoLook from './AdmissionInfoLook';
 import {connect} from 'react-redux'
 import {admissionProcedure} from '../../redux/actions/ADMISSION/fetchProcedure'
 
+import {LoadingView} from '../LoadingView/Loading'
 class AdmissionProcedure extends React.Component
 {
     static fetchData(store)
@@ -34,7 +35,7 @@ class AdmissionProcedure extends React.Component
         <div className="Admission__MainWindow">
            <AdmissionInfoLook MainTitle="Admission Procedure" >
          <div className="AdmissionProcedure">
-           {this.props.Admission.AdmissionData && this.props.Admission.AdmissionData.AdmissionProcedure.map((data,i)=>{
+           {this.props.Admission.AdmissionData ? this.props.Admission.AdmissionData.AdmissionProcedure.map((data,i)=>{
                 return (
                     <ul>
                         <li key={data.id}><h3>{data.id}</h3>
@@ -51,7 +52,7 @@ class AdmissionProcedure extends React.Component
                           
                     </ul>
                 )
-            })}
+            }): <LoadingView /> }
            </div>
            </AdmissionInfoLook>
           <QuickAccess />
